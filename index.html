@@ -74,7 +74,7 @@
     let seed = new Array(16).fill(0).map((x, i)=>i<3?0:1);
     seed = tf.tensor(seed, [1, 1, 1, 16]);
 
-    const D = 96;
+    const D = 55;
     const initState = tf.tidy(()=>{
       const D2 = D/2;
       const a = seed.pad([[0, 0], [D2-1, D2], [D2-1, D2], [0,0]]);
@@ -104,7 +104,7 @@
       });
     }
 
-    const scale = 4;
+    const scale = 13;
 
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
