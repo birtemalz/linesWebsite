@@ -70,10 +70,10 @@
   }
 
   const run = async ()=>{
-    const r = await fetch("/7600.json");
+    const r = await fetch("7600.json");
     const consts = parseConsts(await r.json());
 
-    const model = await tf.loadGraphModel("/7600.json");
+    const model = await tf.loadGraphModel("7600.json");
     Object.assign(model.weights, consts);
 
     let seed = new Array(16).fill(0).map((x, i)=>i<3?0:1);
