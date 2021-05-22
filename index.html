@@ -11,12 +11,9 @@
       <style>
          div {
              text-align:center;
-             width: 60%;
-             min-height: 100px;
-             padding: 10px;
-             border: 2px solid green;
          }
       </style>
+        <canvas id='canvas' style="border: 1px solid black; image-rendering: pixelated;"></canvas>
    </head>
     
    <body>
@@ -32,6 +29,7 @@
 <script>
   "use strict";
 
+    
   const sleep = (ms)=>new Promise(resolve => setTimeout(resolve, ms));
 
   const parseConsts = model_graph=>{
